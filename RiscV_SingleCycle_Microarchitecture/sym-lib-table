@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RiscV_Microachitecture")(type "KiCad")(uri "${KIPRJMOD}/RiscV_Microachitecture.kicad_sym")(options "")(descr ""))
+)

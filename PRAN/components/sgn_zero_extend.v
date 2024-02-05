@@ -16,7 +16,7 @@ always @(*) begin
         3'b100: ext_out = {24'b0, read_data_mem[7:0]};
         // lhu
         3'b101: ext_out = {16'b0, read_data_mem[15:0]};
-		  
+		
         default: ext_out = 32'bxxxx_xxxx_xxxx_xxxx_xxxx_xxxx_xxxx_xxxx; // undefined
     endcase
 end
