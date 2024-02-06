@@ -17,17 +17,17 @@ module controller (input [6:0] op,
                    Store,
                    output [2:0] Load,
                    output [3:0] ALUControl);
-
-wire [1:0] ALUOp;
-wire       Branch, Jump, Take_Branch;
-
-main_decoder    md (op,funct3, Zero, ResultSrc, MemWrite, Branch,ALUR31,
-ALUSrc, RegWrite , Jump,  Jalr, Take_Branch, ImmSrc, ALUOp, Store, Load);
-
-alu_decoder     ad (op[5], funct3, funct7b5, ALUOp, ALUControl);
-
-// for jump and branch
-assign PCSrc = (Branch & Take_Branch) | Jump;
-assign Op5   = op[5];
-
+    
+    wire [1:0] ALUOp;
+    wire       Branch, Jump, Take_Branch;
+    
+    main_decoder    md (op,funct3, Zero, ResultSrc, MemWrite, Branch,ALUR31,
+    ALUSrc, RegWrite , Jump,  Jalr, Take_Branch, ImmSrc, ALUOp, Store, Load);
+    
+    alu_decoder     ad (op[5], funct3, funct7b5, ALUOp, ALUControl);
+    
+    // for jump and branch
+    assign PCSrc = (Branch & Take_Branch) | Jump;
+    assign Op5   = op[5];
+    
 endmodule

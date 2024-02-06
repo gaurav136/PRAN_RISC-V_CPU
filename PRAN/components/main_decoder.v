@@ -52,7 +52,7 @@ always @(*) begin
         7'b1101111: controls = 17'b1_11_x_0_10_0_xx_1_xx_xxx_0; // jal
         
         
-        default:    	controls = 17'bx_xx_x_x_xx_x_xx_x_xx_xxx_x; // ???
+        default:    controls = 17'bx_xx_x_x_xx_x_xx_x_xx_xxx_x; // ???
     endcase
     
     Take_Branch = 0;

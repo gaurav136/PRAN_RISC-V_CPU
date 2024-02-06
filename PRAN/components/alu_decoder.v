@@ -18,10 +18,10 @@ module alu_decoder (input opb5,
                     if (funct7b5 & opb5) ALUControl = 4'b1000; //sub
                     else ALUControl                 = 4'b0000; // add, addi
                 end
-                3'b001:  ALUControl    = 4'b0001; // sll, slli
-                3'b010:  ALUControl    = 4'b0010; // slt, slti
-                // 3'b011:  ALUContorl = 4'b0011; // sltu, sltiu
-                3'b100:  ALUControl    = 4'b0100; // xor, xori
+                3'b001:  ALUControl = 4'b0001; // sll, slli
+                3'b010:  ALUControl = 4'b0010; // slt, slti
+                3'b011:  ALUContorl = 4'b0011; // sltu, sltiu
+                3'b100:  ALUControl = 4'b0100; // xor, xori
                 
                 3'b101:  begin
                     if	 (funct7b5) ALUControl = 4'b0101; //sra, srai
