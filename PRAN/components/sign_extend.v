@@ -1,11 +1,9 @@
 
 // sign_ext.v - logic for sign extension
 
-module sign_extend (
-    input  [31:7]     instr,
-    input  [ 1:0]     immsrc,
-    output reg [31:0] immext
-);
+module sign_extend (input [31:7] instr,
+                    input [1:0] immsrc,
+                    output reg [31:0] immext);
 
 always @(*) begin
     case(immsrc)
